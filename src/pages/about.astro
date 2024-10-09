@@ -81,7 +81,7 @@ const meta = 3;
 
         <article>
           <p>Mi mood de hoy: {isFeliz && "🥳 Estoy feliz"}</p>
-          <p>{isLibre && "🤔 No estoy libre"}</p>
+          {isLibre && <p>"🤔 No estoy libre"</p>}
           <p>
             {
               meta === 3
