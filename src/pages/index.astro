@@ -8,18 +8,24 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Inicio</title>
 	</head>
 	<body>
 		<header>
 			<h1>Martydev</h1>
 			<p>Bienvenido a mi blog</p>
+
+			<nav>
+				<a href="/">Inicio</a>
+				<a href="/about">Acerca de</a>
+				<a href="/blog">Blog</a>
+			</nav>
 		</header>
 		<main>
-			Aquí encontrarás mis articulos
+			<p>Aquí encontrarás mis articulos</p>
 		</main>
 		<footer>
-			Todos los derechos reservados &copy | {new Date().getFullYear()};
+			<p>Todos los derechos reservados &copy | {new Date().getFullYear()};</p>
 		</footer>
 	</body>
 </html>
