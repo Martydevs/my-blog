@@ -1,5 +1,39 @@
 ---
+interface Identity {
+  nombre: string;
+  pais: string;
+  ocupacion: string;
+  hobbies: string[];
+  edad: number;
+}
 
+const pageTitle = "Acerca de mí";
+
+const identidad = {
+  nombre: "Andre Perez",
+  edad: 22,
+  pais: "Mexico",
+  ocupacion: "Desarollador Front-end",
+  hobbies: ["Programar", "Leer", "Jugar"],
+} satisfies Identity;
+
+const habilidades = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Astro",
+  "React",
+  "Angular",
+  "Docker",
+  "GitHub",
+  "Git",
+  "TailwindCSS",
+  "TypeScript",
+];
+
+const isFeliz = true;
+const isLibre = false;
+const meta = 3;
 ---
 
 <html lang="es">
@@ -7,7 +41,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Acerca de</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
     <header>
@@ -21,8 +55,41 @@
       </nav>
     </header>
     <main>
+      <h1>{pageTitle}</h1>
+
       <section>
-        <p>Aqui encontraras informacion sobre mi</p>
+        <h2>Algunos datos sobre mí</h2>
+        <ul>
+          <li>
+            👋 Me llamo {identidad.nombre} y tengo {identidad.edad} años de edad
+          </li>
+          <li>
+            💼 Actualmente trabajo como {identidad.ocupacion} usando {
+              habilidades[5]
+            }
+          </li>
+          <li>🏙 Mi pais donde vivo es {identidad.pais}</li>
+          <li>🐱‍👤 Mis hobbies son los siguientes:</li>
+          <ul>
+            {identidad.hobbies.map((hobby) => <li>{hobby}</li>)}
+          </ul>
+          <li>👨‍💻 Mis habilidades son los siguientes:</li>
+          <ul>
+            {habilidades.map((habilidad) => <li>{habilidad}</li>)}
+          </ul>
+        </ul>
+
+        <article>
+          <p>Mi mood de hoy: {isFeliz && "🥳 Estoy feliz"}</p>
+          <p>{isLibre && "🤔 No estoy libre"}</p>
+          <p>
+            {
+              meta === 3
+                ? "Estoy en la meta 🎯"
+                : "Estoy a pocos pasos de la meta 🎯"
+            }
+          </p>
+        </article>
       </section>
     </main>
     <footer>

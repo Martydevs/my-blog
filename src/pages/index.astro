@@ -1,5 +1,5 @@
 ---
-
+const pageTitle = "Inicio";
 ---
 
 <html lang="es">
@@ -8,7 +8,7 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Inicio</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<header>
@@ -22,7 +22,7 @@
 			</nav>
 		</header>
 		<main>
-			<p>Aquí encontrarás mis articulos</p>
+			<h2>👋 Bienvenido a mi blog</h2>
 		</main>
 		<footer>
 			<p>Todos los derechos reservados &copy | {new Date().getFullYear()};</p>
